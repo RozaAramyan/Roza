@@ -1,0 +1,76 @@
+
+1.  Check registration with valid values
+"https://automationteststore.com/index.php?rt=account/create"  page is opened
+
+-fill in the required fields with valid values
+-click on button continue
+-Expected result: should go to the account page.
+
+2.Check login with valid datas
+-https://automationteststore.com/index.php?rt=account/login page is opened
+
+-fill in "Login name" field
+-fill in "Password" field
+-click on button Login
+-Expected result:should open a page with title "My Account".
+
+3.Check login with invalid login name
+-https://automationteststore.com/index.php?rt=account/login page is opened
+
+-fill in "Login name" field with invalid value
+-fill in "Password" field
+-click on button Login
+-Expected result:should be error message with text "Incorrect login or password provided"
+
+4.Check login with invalid password
+-https://automationteststore.com/index.php?rt=account/login page is opened
+
+-fill in "Login name" field
+-fill in "Password" field with invalid value
+-click on button Login
+-Expected result:should be error message with text "Incorrect login or password provided"
+
+5.Check if the word automation is in the URL, i.e the page has been accessed 
+-https://www.google.com/  page is opened
+
+-fill in URL field 
+-press the enter key
+-Expected result: URL should include the word automation
+
+6.Check Login and Register button 
+https://automationteststore.com/ page is opened
+
+-click on button Login or registration
+-Expected result:the url should include- "/index.php?rt=account/login"
+
+7.Check Skincare button 
+https://automationteststore.com/ page is opened
+
+-click on button Skincare
+-Expected result:should open a page with "Skincare" title.
+
+8.Check  MAC button
+https://automationteststore.com/ page is opened
+
+-go to section BRANDS SCROLLING LIST
+-click on MAC
+-Expected result:should open a page with "M.A.C" title
+
+9.Check  Books button
+https://automationteststore.com/ page is opened
+
+-click on button Books
+-Expected result:should open a page with "Books" title
+
+
+
+
+
+
+
+
+
+
+
+
+

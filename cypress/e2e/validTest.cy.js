@@ -1,6 +1,6 @@
 /// <reference types="cypress" /> 
 describe("MY ex. Work", ()=>{
-    it("register and login",()=>{
+it("register and login",()=>{
         cy.visit("https://automationteststore.com/index.php?rt=account/create");
         cy.get("[name='firstname']").type("Tamy");
         cy.get("[name='lastname']").type("Aram");
@@ -18,28 +18,27 @@ describe("MY ex. Work", ()=>{
         cy.get("[name='confirm']").type("1234qwertt");
         cy.get("[name='agree']").click();
         cy.get("[title='Continue']").click();
- cy.get('.maintext').should("have.text",' Create Account')
+cy.get('.maintext').should("have.text",' Create Account')
        
-
-    });
-    it("Check with valid datas",()=>{
+});
+   
+it("Check with valid datas",()=>{
         cy.visit("https://automationteststore.com/index.php?rt=account/login");
         cy.get("[name='loginname']").type("Tamik");
         cy.get("[type='password']").type("1234qwertt");
-        
         cy.get("[title='Login']").click();
-
         cy.get('.maintext').should("have.text",' My Account')
-   });
+});
 
-    it("Check with invalid login",()=>{
+it("Check with invalid login",()=>{
         cy.visit("https://automationteststore.com/index.php?rt=account/login"); 
         cy.get("[name='loginname']").type("Tam");
         cy.get("[type='password']").type("1234qwertt");
         cy.get("[title='Login']").click();
         cy.get('.alert').should("have.text",'Error: Incorrect login or password provided')
-    })  
-    it("Check with invalid password",()=>{
+})  
+    
+it("Check with invalid password",()=>{
         cy.visit("https://automationteststore.com/index.php?rt=account/login");
         cy.get("[name='loginname']").type("Tamik");
         cy.get("[type='password']").type("1234q");
